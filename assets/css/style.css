@@ -1,3 +1,12 @@
+.wp-block-petitphp-map input.wide {
+    height: 40px;
+    margin-bottom: 5px;
+    padding: 6px 10px;
+    border: 1px solid #dedede;
+    box-shadow: 0 2px 2px #efefef inset;
+    font-size: 0.9em;
+}
+
 .wp-block-petitphp-map .leaflet-map {
     width: 100%;
     height: 250px;
