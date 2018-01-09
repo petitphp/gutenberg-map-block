@@ -85,7 +85,7 @@ class MapBlock extends Component {
 					placeholder={__('Enter your address')}
 					className={'wide'}
 					onFocus={setFocus}
-					value={address.trim()}
+					value={address}
 					onChange={(nextAddress) => {
 						setAttributes({
 							address: nextAddress.target.value,
@@ -105,8 +105,8 @@ registerBlockType('petitphp/map', {
 	attributes: {
 		address: {
 			type: 'string',
-			source: 'text',
-			default: ''
+			source: 'children',
+			selector: 'p',
 		},
 		lat: {
 			type: 'string',
