@@ -1,3 +1,5 @@
+const webpack = require( 'webpack' );
+
 module.exports = {
 	entry: './assets/js/block.js',
 	output: {
@@ -13,4 +15,5 @@ module.exports = {
 			},
 		],
 	},
+	plugins: ( 'production' === process.env.NODE_ENV ) ? [ new webpack.optimize.UglifyJsPlugin() ] : []
 };
