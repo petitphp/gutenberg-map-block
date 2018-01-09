@@ -83,6 +83,7 @@ class MapBlock extends Component {
 			<div className={className}>
 				<input
 					placeholder={__('Enter your address')}
+					className={'wide'}
 					onFocus={setFocus}
 					value={address.trim()}
 					onChange={(nextAddress) => {
