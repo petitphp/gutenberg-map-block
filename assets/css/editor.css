@@ -2,3 +2,7 @@
     border: none;
     width: 100%;
 }
+
+.wp-block-petitphp-map .leaflet-map {
+    z-index: 10;
+}
