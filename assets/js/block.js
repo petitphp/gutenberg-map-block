@@ -81,7 +81,6 @@ class MapBlock extends Component {
 
 		return (
 			<div className={className}>
-				<h2>Map</h2>
 				<input
 					placeholder={__('Enter your address')}
 					onFocus={setFocus}
