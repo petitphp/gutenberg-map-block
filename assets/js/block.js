@@ -84,7 +84,7 @@ class MapBlock extends Component {
 				<input
 					placeholder={__('Enter your address')}
 					onFocus={setFocus}
-					value={address}
+					value={address.trim()}
 					onChange={(nextAddress) => {
 						setAttributes({
 							address: nextAddress.target.value,
@@ -136,7 +136,7 @@ registerBlockType('petitphp/map', {
 
 		return (
 			<div className={className}>
-				<p>{address.trim()}</p>
+				<p>{address}</p>
 				<div id={`leaflet-map-${id}`}
 				     className={'leaflet-map'}
 				     data-lat={lat}
