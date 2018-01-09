@@ -1,8 +1,8 @@
-import { mapValues } from 'lodash'
+import {mapValues} from 'lodash'
 
 const {__} = wp.i18n
 const {Component} = wp.element
-const {registerBlockType, Editable, BlockControls, AlignmentToolbar} = wp.blocks
+const {registerBlockType} = wp.blocks
 const {withInstanceId} = wp.components
 
 class MapBlock extends Component {
