@@ -1,3 +1,5 @@
+import { mapValues } from 'lodash'
+
 const {__} = wp.i18n
 const {Component} = wp.element
 const {registerBlockType, Editable, BlockControls, AlignmentToolbar} = wp.blocks
@@ -33,8 +35,17 @@ class MapBlock extends Component {
 
 	handleMapClick(e) {
 		const {setAttributes} = this.props
-		setAttributes(e.latlng)
 		this.marker.setLatLng(e.latlng)
+
+		// Gutenberg does weird rounding on lat/lng attributes when saving
+		// which cause parsing errors when loading the block. That why we
+		// limit decimals here.
+		setAttributes(
+			mapValues(
+				e.latlng,
+				(val) => val.toFixed(11)
+			)
+		)
 	}
 
 	handleZoomChange(e) {
